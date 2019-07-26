@@ -1,6 +1,8 @@
 #include "close_trains.h"
 
-void close_trains_matcher(ModelRoot *model, CloseTrainsFrame *frame, int startOpIndex,
+void close_trains_matcher(ModelRoot *model,
+		CloseTrainsFrame *frame /*TODO the content of this param is ignored for now*/,
+		int startOpIndex /*TODO this param is ignored for now*/,
 		CloseTrainsMatchSet *results) {
 	int match_cntr = 0;
 	int i0, i1, i2;
@@ -27,4 +29,8 @@ void close_trains_matcher(ModelRoot *model, CloseTrainsFrame *frame, int startOp
 			}
 		}
 	}
+
+	results->size = match_cntr;
+
+	return;
 }

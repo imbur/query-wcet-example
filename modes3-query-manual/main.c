@@ -16,18 +16,22 @@ ModelRoot model;
 
 int main() {
 	// TODO model initialization
-//	generate_model(&model)
+	generate_model(&model);
 
 	// TODO initialize matcher structures
-	CloseTrainsMatchSet *matches = NULL;
-	CloseTrainsFrame *frame = NULL;
-
-#ifdef DISPLAY
-	printf("Hello, world!\n");
-#endif
+	CloseTrainsMatchSet matches;
+	CloseTrainsFrame frame;
 
 	int i = 0;
-	close_trains_matcher(&model, frame, i, matches);
+	close_trains_matcher(&model,
+			&frame /*TODO the content of this param is ignored for now*/,
+			i /*TODO this param is ignored for now*/, &matches);
+
+#ifdef DISPLAY
+	for (int j = 0; j < matches.size; ++j) {
+		printf("Match %d> start=%d ; end=%d\n", j+1,matches.matches[j].start->segment_id,matches.matches[j].end->segment_id);
+	}
+	#endif
 
 	return 0;
 }
