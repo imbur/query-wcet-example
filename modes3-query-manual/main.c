@@ -4,6 +4,10 @@
 #include "model/segment.h"
 #include "model/train.h"
 
+#ifdef DISPLAY
+#include <stdio.h>
+#endif
+
 ModelRoot model;
 
 typedef struct _CloseTrainsFrame {
@@ -61,6 +65,10 @@ int main() {
 	// TODO initialize matcher structures
 	CloseTrainsMatchSet *matches = NULL;
 	CloseTrainsFrame *frame = NULL;
+
+#ifdef DISPLAY
+	printf("Hello, world!\n");
+#endif
 
 	int i = 0;
 	close_trains_matcher(frame, i, matches);
