@@ -7,7 +7,7 @@ typedef struct _Segment Segment;
 
 typedef struct _Train {
 	double speed;
-	Segment* on;
+	Segment *on;
 } Train;
 
 #endif /* TRAIN_H_ */

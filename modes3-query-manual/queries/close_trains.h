@@ -23,7 +23,7 @@ typedef struct _CloseTrainsMatchSet {
 	CloseTrainsMatch matches[10];
 } CloseTrainsMatchSet;
 
-void close_trains_matcher(ModelRoot *model, CloseTrainsFrame *frame, int startOpIndex,
-		CloseTrainsMatchSet *results);
+void close_trains_matcher(ModelRoot *model, CloseTrainsFrame *frame,
+		int startOpIndex, CloseTrainsMatchSet *results);
 
 #endif /* QUERIES_CLOSE_TRAINS_H_ */

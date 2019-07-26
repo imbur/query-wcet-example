@@ -11,8 +11,8 @@ typedef struct _Segment Segment;
 
 typedef struct _Segment {
 	int32_t segment_id;
-	Train* train;
-	Segment* connectedTo[2];
+	Train *train;
+	Segment *connectedTo[2];
 } Segment;
 
 Segment** get_connectedTo(Segment*);
