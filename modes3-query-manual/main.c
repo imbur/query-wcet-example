@@ -14,7 +14,7 @@
 
 ModelRoot model;
 
-int main() {
+int main(void) {
 	// TODO model initialization
 	generate_model(&model);
 
