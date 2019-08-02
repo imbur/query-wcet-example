@@ -31,7 +31,7 @@ int main(void) {
 	for (int j = 0; j < matches.size; ++j) {
 		printf("Match %d> start=%d ; end=%d\n", j+1,matches.matches[j].start->segment_id,matches.matches[j].end->segment_id);
 	}
-	#endif
+#endif
 
 	return 0;
 }
