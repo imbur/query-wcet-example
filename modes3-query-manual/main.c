@@ -15,6 +15,12 @@
 ModelRoot model;
 
 int main(void) {
+	*((uint32_t*)0x41004408UL) = 0x00020000;
+	*((uint8_t*)0x41004440UL) = 0x0002;
+
+	*((uint32_t*)0x41004418UL) = 0x00020000;
+
+
 	// TODO model initialization
 	generate_model(&model);
 

@@ -5,7 +5,7 @@
 #include "segment.h"
 
 #define TRAINS_MAX 10
-#define SEGMENTS_MAX 10
+#define SEGMENTS_MAX 1000
 
 typedef struct _ModelRoot {
 	int train_count;
